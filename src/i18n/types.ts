@@ -49,10 +49,6 @@ export interface TranslationSchema {
     city: string;
     phone: string;
     email: string;
-    doctorName: string;
-    doctorQualifications: string;
-    doctorProfession: string;
-    doctorRegistration: string;
     addressShop: string;
     addressBuilding: string;
     addressLocality: string;
@@ -72,18 +68,6 @@ export interface TranslationSchema {
       therapiesCta: string;
       scrollToExplore: string;
       location: string;
-    };
-    doctorIntro?: {
-      eyebrow: string;
-      title: string;
-      doctorName: string;
-      qualifications: string;
-      specialization: string;
-      registrationBadge: string;
-      bio: string;
-      bookAppointmentBtn: string;
-      callDirectBtn: string;
-      viewProfileBtn: string;
     };
     intro: {
       eyebrow: string;
@@ -184,21 +168,37 @@ export interface TranslationSchema {
     introHeading: string;
     introP1: string;
     introP2: string;
+    storyHeading: string;
+    storyP1: string;
+    storyP2: string;
     treatmentRoomCaption: string;
     preparationsCaption: string;
     philosophyEyebrow: string;
     philosophyHeading: string;
+    philosophyIntro: string;
     philosophyItems: string[];
-    founderEyebrow: string;
-    founderHeading: string;
-    founderProfession: string;
-    founderP1: string;
-    founderP2: string;
+    visionEyebrow: string;
+    visionHeading: string;
+    visionP1: string;
+    visionP2: string;
     sanctuaryCaption: string;
+    journeyEyebrow: string;
+    journeyHeading: string;
+    journeyIntro: string;
+    journeySteps: { title: string; description: string }[];
+    environmentEyebrow: string;
+    environmentHeading: string;
+    environmentText: string;
+    environmentAlt: string;
     clinicalTeamEyebrow: string;
     clinicalTeamHeading: string;
     clinicalTeamDesc: string;
-    verifiedBadge: string;
+    teamProfiles: {
+      name: string;
+      title: string;
+      credentials: string[];
+      introduction: string;
+    }[];
     fields: {
       name: string;
       qualification: string;
@@ -210,6 +210,7 @@ export interface TranslationSchema {
     ctaHeading: string;
     ctaText: string;
     contactBtn: string;
+    ctaImageAlt: string;
   };
   panchakarmaPage: {
     heroEyebrow: string;
@@ -342,9 +343,6 @@ export interface TranslationSchema {
     heroLede: string;
     getInTouch: string;
     divisionTitle: string;
-    leadPractitioner: string;
-    doctorBio: string;
-    verifiedRegistration: string;
     directContact: string;
     clinicHours: string;
     monSat: string;

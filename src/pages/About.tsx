@@ -4,22 +4,11 @@ import { PageHero } from '../components/ui/PageHero';
 import { SectionLabel } from '../components/ui/SectionLabel';
 import { RevealText } from '../components/ui/RevealText';
 import { Reveal } from '../components/ui/Reveal';
-import { Parallax } from '../components/ui/Parallax';
-import { ImageReveal } from '../components/ui/ImageReveal';
-import { FounderSection } from '../components/about/FounderSection';
+import { ClinicalVision } from '../components/about/ClinicalVision';
 import { ClinicalTeam } from '../components/about/ClinicalTeam';
-import { WhyOneWellness } from '../components/sections/WhyOneWellness';
 import { ImmersiveCta } from '../components/sections/ImmersiveCta';
 import { useSeo } from '../utils/seo';
 import { img } from '../data/images';
-
-const DEFAULT_PHILOSOPHY = [
-  'Care planned around one person at a time',
-  'Panchakarma delivered slowly and with preparation',
-  'Therapies selected individually, not from a menu',
-  'Rest treated as part of the healing process',
-  'Ayurvedic wisdom tailored for modern lifestyles'
-];
 
 export function About() {
   const { t } = useTranslation();
@@ -28,14 +17,11 @@ export function About() {
     title: t('about.seoTitle', { defaultValue: 'About One Wellness | Ayurvedic Clinic & Research Center, Nashik' }),
     description: t('about.seoDescription', {
       defaultValue:
-        'One Wellness Clinic & Research Center in Nashik — clinical guidance by Dr. Shubham Mahajan (BAMS, DYS). Located at Roongtha Shopping Hub, Indira Nagar, Agra-Mumbai Highway, Nashik.'
+        'Discover the story, philosophy and team behind One Wellness Clinic & Research Center, a personalised Ayurvedic wellness clinic in Nashik.'
     }),
     path: '/about',
-    image: img.retreat
+    image: img.clinicEnvironment
   });
-
-  const rawPhil = t('about.philosophyItems', { returnObjects: true });
-  const philosophy = Array.isArray(rawPhil) && rawPhil.length > 0 ? (rawPhil as string[]) : DEFAULT_PHILOSOPHY;
 
   return (
     <>
@@ -44,73 +30,31 @@ export function About() {
         title={t('about.heroTitle', { defaultValue: 'One Wellness Clinic & Research Center' })}
         lede={t('about.heroLede', { defaultValue: 'A Contemporary Space Inspired by Traditional Wellness Wisdom.' })}
         image={img.retreat}
-        alt="The wellness centre exterior at dusk, with warm interior light and a reflecting pool"
+        alt="A calm wellness centre exterior in warm evening light"
       />
 
       <section aria-labelledby="about-intro" className="bg-ivory">
         <div className="mx-auto max-w-edge px-5 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-16">
-          <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-7">
+          <div className="mx-auto max-w-3xl text-center">
               <SectionLabel>{t('about.introEyebrow', { defaultValue: 'Who we are' })}</SectionLabel>
               <RevealText
                 as="h2"
                 id="about-intro"
-                byLine
-                text={t('about.introHeading', { defaultValue: 'A Broader Vision\nof Holistic Wellbeing.' })}
-                className="mt-3 font-display text-[1.8rem] font-light leading-[1.08] text-ink sm:text-[2.5rem]"
+                text={t('about.storyHeading', { defaultValue: 'Rooted in Care. Growing Towards Wellness.' })}
+                className="mt-3 font-display text-[2rem] font-light leading-[1.08] text-ink sm:text-[2.8rem]"
               />
-            </div>
-            <div className="lg:col-span-5">
-              <div className="max-w-md space-y-3.5 text-xs sm:text-sm leading-relaxed text-ink/65">
+              <div className="mx-auto mt-5 max-w-2xl space-y-4 text-sm leading-relaxed text-ink/65 sm:text-base">
                 <Reveal delay={0.06}>
                   <p>
-                    {t('about.introP1', {
-                      defaultValue:
-                        'One Wellness Clinic & Research Center brings together a broader vision of holistic wellbeing.'
-                    })}
+                    {t('about.storyP1', { defaultValue: 'One Wellness is a collective space for thoughtful, personalised care—where traditional Ayurvedic wisdom meets the realities of modern life.' })}
                   </p>
                 </Reveal>
                 <Reveal delay={0.1}>
                   <p>
-                    {t('about.introP2', {
-                      defaultValue:
-                        'The centre was conceived as a calm clinical sanctuary — a place where traditional Ayurvedic therapies and Panchakarma programs are delivered with careful individual attention.'
-                    })}
-                  </p>
-                </Reveal>
-                <Reveal delay={0.14}>
-                  <p>
-                    {t('about.introP3', {
-                      defaultValue:
-                        'Rather than viewing therapies as isolated treatments, we integrate Ayurvedic consultations, restorative procedures, supportive nutrition and sustainable routine guidance.'
-                    })}
+                    {t('about.storyP2', { defaultValue: 'We see wellbeing as an ongoing conversation between body, mind and daily habits. Through attentive listening, appropriate guidance and considered therapies, our team helps each person shape a journey that feels relevant to them.' })}
                   </p>
                 </Reveal>
               </div>
-            </div>
-          </div>
-
-          <div className="mt-8 grid grid-cols-1 items-center gap-6 sm:grid-cols-12 sm:gap-8 lg:mt-12">
-            <div className="sm:col-span-5">
-              <Parallax distance={14}>
-                <ImageReveal
-                  src={img.interiorDetail}
-                  alt="Afternoon light across lime-plaster wall and terracotta tile floor"
-                  ratio="aspect-[4/3]"
-                  caption={t('about.sanctuaryCaption', { defaultValue: 'Clinical sanctuary, Nashik' })}
-                />
-              </Parallax>
-            </div>
-            <div className="sm:col-span-7">
-              <Parallax distance={-14}>
-                <ImageReveal
-                  src={img.herbsDetail}
-                  alt="Ayurvedic herbs, powders, a stone mortar and brass bowls arranged on sandstone"
-                  ratio="aspect-[16/10]"
-                  caption={t('about.preparationsCaption', { defaultValue: 'Preparations, measured by hand' })}
-                />
-              </Parallax>
-            </div>
           </div>
         </div>
       </section>
@@ -118,21 +62,24 @@ export function About() {
       <section aria-labelledby="philosophy-heading" className="bg-forest">
         <div className="mx-auto max-w-edge px-5 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-16">
           <SectionLabel tone="light">{t('about.philosophyEyebrow', { defaultValue: 'Philosophy' })}</SectionLabel>
-          <h2 id="philosophy-heading" className="sr-only">
-            {t('about.philosophyHeading', { defaultValue: 'Our philosophy' })}
+          <h2 id="philosophy-heading" className="mt-3 font-display text-[2rem] font-light leading-tight text-ivory sm:text-[2.6rem]">
+            {t('about.philosophyHeading', { defaultValue: 'Care shaped around the whole person' })}
           </h2>
-          <ol className="mt-6">
-            {philosophy.map((line, i) => (
+          <div className="mt-4 max-w-2xl text-sm leading-relaxed text-ivory/70 sm:text-base">
+            {t('about.philosophyIntro', { defaultValue: 'Our approach brings together mindful listening, traditional knowledge and practical guidance, with care adapted to each person and their circumstances.' })}
+          </div>
+          <ol className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {(t('about.philosophyItems', { returnObjects: true }) as string[]).map((line, i) => (
               <Reveal
                 as="li"
                 key={line || i}
                 delay={i * 0.04}
-                className="flex items-baseline gap-4 border-b border-ivory/15 py-3.5 sm:gap-6 sm:py-4.5"
+                className="flex items-baseline gap-3 border border-ivory/15 bg-ivory/5 px-4 py-4 sm:px-5 sm:py-5"
               >
-                <span className="font-display text-xs italic text-sage">
+                <span className="font-display text-xs italic text-[#D3B67C]">
                   {String(i + 1).padStart(2, '0')}
                 </span>
-                <span className="font-display text-[1.25rem] font-light leading-tight text-ivory sm:text-[1.8rem] lg:text-[2rem]">
+                <span className="font-display text-base font-light leading-tight text-ivory sm:text-lg">
                   {line}
                 </span>
               </Reveal>
@@ -141,15 +88,57 @@ export function About() {
         </div>
       </section>
 
-      <FounderSection />
+      <ClinicalVision />
+      <section aria-labelledby="journey-heading" className="bg-cream">
+        <div className="mx-auto max-w-edge px-5 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-16">
+          <div className="max-w-2xl">
+            <SectionLabel>{t('about.journeyEyebrow', { defaultValue: 'Your wellness journey' })}</SectionLabel>
+            <h2 id="journey-heading" className="mt-3 font-display text-[2rem] font-light leading-tight text-ink sm:text-[2.6rem]">
+              {t('about.journeyHeading', { defaultValue: 'A considered process, at your pace' })}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink/65 sm:text-base">
+              {t('about.journeyIntro', { defaultValue: 'Every journey begins with a conversation and unfolds through shared understanding, personalised guidance and thoughtful follow-up.' })}
+            </p>
+          </div>
+          <ol className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {(t('about.journeySteps', { returnObjects: true }) as { title: string; description: string }[]).map((step, i) => (
+              <li key={step.title} className="border-t border-moss/25 pt-4">
+                <span className="font-display text-sm italic text-moss">{String(i + 1).padStart(2, '0')}</span>
+                <h3 className="mt-2 font-display text-xl font-light text-ink">{step.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-ink/60">{step.description}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section aria-labelledby="environment-heading" className="bg-ivory">
+        <div className="mx-auto max-w-edge px-5 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-16">
+          <div className="mb-6 max-w-2xl">
+            <SectionLabel>{t('about.environmentEyebrow', { defaultValue: 'Our space' })}</SectionLabel>
+            <h2 id="environment-heading" className="mt-3 font-display text-[2rem] font-light leading-tight text-ink sm:text-[2.6rem]">
+              {t('about.environmentHeading', { defaultValue: 'A calm setting for care and reflection' })}
+            </h2>
+            <p className="mt-3 text-sm leading-relaxed text-ink/65 sm:text-base">
+              {t('about.environmentText', { defaultValue: 'Our clinic brings together dedicated spaces for consultation, traditional therapies and quiet moments of restoration.' })}
+            </p>
+          </div>
+          <img
+            src={img.clinicEnvironment}
+            alt={t('about.environmentAlt', { defaultValue: 'Clinic treatment rooms, a meditation space, reception and consultation room' })}
+            className="max-h-[34rem] w-full border border-ink/10 object-cover object-center shadow-sm"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
       <ClinicalTeam />
-      <WhyOneWellness />
       <ImmersiveCta
         eyebrow={t('about.ctaEyebrow', { defaultValue: 'Visit us' })}
         heading={t('about.ctaHeading', { defaultValue: 'Come and See\nthe Space.' })}
         text={t('about.ctaText', { defaultValue: 'Consultations are by appointment so that the room, therapists and preparations can be readied for you.' })}
-        image={img.interiorDetail}
-        alt="Warm light across a plastered wall and terracotta floor inside the centre"
+        image={img.nature}
+        alt={t('about.ctaImageAlt', { defaultValue: 'A quiet, green landscape surrounding a wellness retreat' })}
         secondary={{
           label: t('about.contactBtn', { defaultValue: 'Contact One Wellness' }),
           to: '/contact'

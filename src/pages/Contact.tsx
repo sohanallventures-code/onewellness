@@ -18,7 +18,6 @@ import { Reveal } from '../components/ui/Reveal';
 import { useSeo } from '../utils/seo';
 import { img } from '../data/images';
 import { site, whatsappLink, telLink, mailLink, websiteLink } from '../config/site';
-import doctorImg from '../assets/dr_shubham_mahajan.jpg';
 
 export function Contact() {
   const { t, i18n } = useTranslation();
@@ -27,7 +26,7 @@ export function Contact() {
   useSeo({
     title: `${t('contactPage.heroTitle')} | One Wellness Clinic & Research Center, Nashik`,
     description:
-      'Contact One Wellness Clinic & Research Center in Nashik. Consult Dr. Shubham Mahajan (BAMS, DYS) for Panchakarma, Agnikarma and Ayurvedic therapies. Address: Roongtha Shopping Hub, Indira Nagar, Nashik.',
+      'Contact One Wellness Clinic & Research Center in Nashik to enquire about personalised Ayurvedic wellness, Panchakarma and clinic appointments.',
     path: '/contact',
     image: img.interiorDetail
   });
@@ -102,7 +101,7 @@ export function Contact() {
       <section aria-labelledby="contact-details-heading" className="bg-ivory">
         <div className="mx-auto max-w-edge px-5 py-10 sm:px-8 sm:py-14 lg:px-14 lg:py-16">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
-            {/* Left Column: Heading, Overview & Doctor Details */}
+            {/* Left Column: Clinic introduction and social links */}
             <div className="lg:col-span-5">
               <SectionLabel>{t('contactPage.getInTouch')}</SectionLabel>
               <RevealText
@@ -117,41 +116,6 @@ export function Contact() {
                 <p className="mt-3 max-w-md text-sm leading-relaxed text-ink/65">
                   {t('site.shortDescription')}
                 </p>
-              </Reveal>
-
-              {/* Doctor & Professional Details Card */}
-              <Reveal delay={0.12} className="mt-5">
-                <div className="border border-ink/15 bg-cream/80 p-5 sm:p-6 shadow-xs">
-                  <div className="flex items-start gap-3.5">
-                    <img
-                      src={doctorImg}
-                      alt={site.doctor.name}
-                      className="h-14 w-14 shrink-0 rounded-full object-cover border-2 border-moss/40 shadow-sm"
-                    />
-                    <div>
-                      <span className="text-[10px] font-sans font-medium uppercase tracking-label text-moss">
-                        {t('contactPage.leadPractitioner')}
-                      </span>
-                      <h3 className="mt-0.5 font-display text-[1.25rem] font-light leading-snug text-ink">
-                        {site.doctor.name}
-                      </h3>
-                      <p className="mt-0.5 text-xs font-medium text-moss">
-                        {site.doctor.qualifications}
-                      </p>
-                      <p className="mt-1.5 text-xs leading-relaxed text-ink/70">
-                        {t('site.doctorProfession')}
-                      </p>
-                      <div className="mt-2.5 border-t border-ink/10 pt-2">
-                        <span className="text-[11px] font-mono uppercase tracking-wider text-ink/60">
-                          {t('aboutPage.fields.registrationNumber')}:{' '}
-                          <strong className="text-ink font-semibold">
-                            {site.doctor.registrationNumber}
-                          </strong>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </Reveal>
 
               {/* Social Media & Justdial Review Links */}

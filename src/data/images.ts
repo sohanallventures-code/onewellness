@@ -18,6 +18,9 @@ import interiorDetail from '../assets/images/ea7e4157-5735-4b17-b85d-11ea524e406
 import nature from '../assets/images/264c468d-d31d-42e6-8956-2a504fde1dae.jpg';
 import meditation from '../assets/images/a5de0399-f41a-4fb5-9851-2f35ed7e6d57.jpg';
 import retreat from '../assets/images/5eac93c7-ee8b-4598-863b-6090d65890a5.jpg';
+import clinicEnvironment from '../assets/images/one-wellness-clinic-environment.jpg';
+import sohanlalPortrait from '../assets/images/dr-sohanlal-chouhan.jpg';
+import priteePortrait from '../assets/images/pritee-mehta.jpg';
 
 /** Central image library so photography can be swapped from one place. */
 export const img = {
@@ -40,5 +43,8 @@ export const img = {
   interiorDetail,
   nature,
   meditation,
-  retreat
+  retreat,
+  clinicEnvironment,
+  sohanlalPortrait,
+  priteePortrait
 };

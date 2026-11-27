@@ -7,7 +7,7 @@ export interface SeoMeta {
   image?: string;
 }
 
-const ORIGIN = 'https://onewellness.example';
+const ORIGIN = 'https://onewellnessclinic.in';
 
 const setMeta = (selector: string, attr: 'name' | 'property', key: string, content: string) => {
   let el = document.head.querySelector<HTMLMetaElement>(selector);

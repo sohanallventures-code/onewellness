@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { InstagramIcon, MailIcon, PhoneIcon, MapPinIcon, MessageSquareIcon } from 'lucide-react';
+import { InstagramIcon, MailIcon, PhoneIcon, MapPinIcon, MessageSquareIcon, GlobeIcon } from 'lucide-react';
 import { localNav } from '../../data/navigation';
-import { site, whatsappLink, telLink, bookAppointmentWhatsappLink, DISCLAIMER } from '../../config/site';
+import { site, telLink, bookAppointmentWhatsappLink, websiteLink, DISCLAIMER } from '../../config/site';
 import logoImg from '../../assets/logo.png';
-import doctorImg from '../../assets/dr_shubham_mahajan.jpg';
 import { useBooking } from '../../context/BookingContext';
 
 const exploreLinks = [
@@ -144,35 +143,13 @@ export function Footer() {
                   {site.email}
                 </a>
               </p>
-            </address>
-
-            {/* Doctor & Professional Details */}
-            <div className="mt-4 border-t border-[#FCFAF4]/10 pt-3 text-xs">
-              <p className="text-[10px] uppercase tracking-[0.16em] text-[#D3B67C] font-semibold">
-                {t('about.clinicalTeamHeading', 'Ayurvedic Clinical Leadership')}
+              <p className="flex items-center gap-2.5">
+                <GlobeIcon className="h-4 w-4 shrink-0 text-[#93A893]" aria-hidden="true" />
+                <a href={websiteLink()} target="_blank" rel="noreferrer noopener" className="transition-colors hover:text-[#D3B67C]">
+                  {site.website}
+                </a>
               </p>
-              <div className="mt-2.5 flex items-center gap-3">
-                <img
-                  src={doctorImg}
-                  alt={site.doctor.name}
-                  className="h-14 w-14 shrink-0 rounded-full object-cover border-2 border-[#D3B67C] shadow-[0_0_12px_rgba(211,182,124,0.35)]"
-                />
-                <div>
-                  <p className="font-serif text-[0.95rem] text-white font-medium">
-                    {site.doctor.name}{' '}
-                    <span className="text-xs font-sans text-[#D3B67C]">
-                      ({site.doctor.qualifications})
-                    </span>
-                  </p>
-                  <p className="mt-0.5 text-[11px] text-[#FCFAF4]/70">
-                    {t('about.founderProfession', site.doctor.profession)}
-                  </p>
-                  <p className="mt-0.5 text-[10px] uppercase tracking-wider text-[#93A893]">
-                    {t('about.fields.registrationNumber', 'Registration Number')}: {site.doctor.registrationNumber}
-                  </p>
-                </div>
-              </div>
-            </div>
+            </address>
 
             {/* Action Buttons */}
             <div className="mt-5 flex flex-col gap-2.5">

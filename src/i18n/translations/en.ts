@@ -52,11 +52,7 @@ export const en: TranslationSchema = {
       'A personalised Ayurvedic wellness experience inspired by traditional principles and designed for modern lifestyles.',
     city: 'Nashik',
     phone: '+91 9175893553',
-    email: '1wellnessclinic@gmail.com',
-    doctorName: 'Dr. Shubham Mahajan',
-    doctorQualifications: 'BAMS, DYS',
-    doctorProfession: 'Ayurveda Consultant and Agnikarma Specialist',
-    doctorRegistration: 'I-124470-A',
+    email: 'onewellnessttc@gmail.com',
     addressShop: 'Shop No. 7071, 7th Floor',
     addressBuilding: 'Roongtha Shopping Hub',
     addressLocality: 'Indira Nagar',
@@ -77,18 +73,6 @@ export const en: TranslationSchema = {
       therapiesCta: 'Explore Our Therapies',
       scrollToExplore: 'Scroll to explore',
       location: 'Nashik, Maharashtra'
-    },
-    doctorIntro: {
-      eyebrow: 'Clinical Leadership',
-      title: 'Meet Our Chief Ayurveda Consultant',
-      doctorName: 'Dr. Shubham Mahajan',
-      qualifications: 'BAMS, DYS',
-      specialization: 'Ayurveda Consultant and Agnikarma Specialist',
-      registrationBadge: 'Registration Number: I-124470-A',
-      bio: 'Directing authentic Panchakarma therapies, specialized Agnikarma procedures, and individualized dosha evaluations at One Wellness Clinic & Research Center, Nashik.',
-      bookAppointmentBtn: 'Book Appointment',
-      callDirectBtn: 'Call +91 9175893553',
-      viewProfileBtn: 'View Clinical Profile'
     },
     intro: {
       eyebrow: 'Our perspective',
@@ -335,29 +319,69 @@ export const en: TranslationSchema = {
       'One Wellness Clinic & Research Center brings together a broader vision of holistic wellbeing.',
     introP2:
       'Our Panchakarma & Ayurvedic Wellness Division is dedicated to creating a personalised environment where traditional Ayurvedic therapies can be experienced with appropriate consultation, structured planning and attentive care.',
+    storyHeading: 'Rooted in Care. Growing Towards Wellness.',
+    storyP1:
+      'One Wellness is a collective space for thoughtful, personalised care—where traditional Ayurvedic wisdom meets the realities of modern life.',
+    storyP2:
+      'We see wellbeing as an ongoing conversation between body, mind and daily habits. Through attentive listening, appropriate guidance and considered therapies, our team helps each person shape a journey that feels relevant to them.',
     treatmentRoomCaption: 'Treatment room',
     preparationsCaption: 'Preparations, measured by hand',
     philosophyEyebrow: 'Philosophy',
-    philosophyHeading: 'Our philosophy',
+    philosophyHeading: 'Care shaped around the whole person',
+    philosophyIntro:
+      'Our approach brings together mindful listening, traditional knowledge and practical guidance, with care adapted to each person and their circumstances.',
     philosophyItems: [
       'Understand the individual.',
       'Respect traditional wisdom.',
       'Personalise the journey.',
       'Support sustainable wellness.'
     ],
-    founderEyebrow: 'Our clinical vision',
-    founderHeading: 'Dr. Shubham Mahajan',
-    founderProfession: 'Ayurveda Consultant and Agnikarma Specialist • BAMS, DYS',
-    founderP1:
-      'Dr. Shubham Mahajan leads the therapeutic philosophy of One Wellness Clinic & Research Center, with an emphasis on authentic Ayurvedic healing, individualised dosha assessment, and specialized Agnikarma and Panchakarma therapies.',
-    founderP2:
-      'Consultations and therapies at One Wellness are delivered under the direct care of Dr. Shubham Mahajan (Registration No: I-124470-A). Practitioner profile and verification are detailed below.',
+    visionEyebrow: 'Our clinical vision',
+    visionHeading: 'A shared commitment to thoughtful care',
+    visionP1:
+      'One Wellness Clinic & Research Center brings together personalised guidance, compassionate care and a holistic view of wellbeing. We listen first, then consider each person’s needs, preferences and everyday life.',
+    visionP2:
+      'Our shared vision is to make space for informed choices and respectful care—drawing on traditional Ayurvedic perspectives while recognising that every wellness journey is individual.',
     sanctuaryCaption: 'Clinical sanctuary, Nashik',
-    clinicalTeamEyebrow: 'Clinical team',
-    clinicalTeamHeading: 'Ayurvedic Clinical Leadership',
+    journeyEyebrow: 'Your wellness journey',
+    journeyHeading: 'A considered process, at your pace',
+    journeyIntro:
+      'Every journey begins with a conversation and unfolds through shared understanding, personalised guidance and thoughtful follow-up.',
+    journeySteps: [
+      { title: 'Listen', description: 'We begin by understanding your priorities, routine and questions.' },
+      { title: 'Understand', description: 'Together, we explore context and discuss suitable next steps.' },
+      { title: 'Personalise', description: 'Guidance and traditional therapies are considered for your needs.' },
+      { title: 'Continue', description: 'We make room to reflect, review and adjust the journey together.' }
+    ],
+    environmentEyebrow: 'Our space',
+    environmentHeading: 'A calm setting for care and reflection',
+    environmentText:
+      'Our clinic brings together dedicated spaces for consultation, traditional therapies and quiet moments of restoration.',
+    environmentAlt: 'Clinic treatment rooms, a meditation space, reception and consultation room',
+    clinicalTeamEyebrow: 'Our people',
+    clinicalTeamHeading: 'Meet Our Team',
     clinicalTeamDesc:
-      'Consultation, diagnostic assessment and therapy planning at One Wellness are directed by our qualified Ayurveda Consultant and Agnikarma Specialist. Consultations ensure every treatment aligns with traditional Ayurvedic science and your personal health goals.',
-    verifiedBadge: 'Verified Ayurvedic Medical Registration',
+      'A team bringing complementary experience and perspectives to the One Wellness approach.',
+    teamProfiles: [
+      {
+        name: 'Dr. Shubham Mahajan',
+        title: 'Ayurveda Consultant and Agnikarma Specialist',
+        credentials: ['BAMS, DYS', 'Registration No. I-124470-A'],
+        introduction: 'Brings an Ayurvedic consultation and Agnikarma perspective to the clinic’s team-based approach.'
+      },
+      {
+        name: 'Dr. Sohanlal S. Chouhan',
+        title: 'Clinical Audiologist | Neuro-Rehabilitation & Swallowing Specialist',
+        credentials: ['Post-Doctorate in Clinical Audiology – ATSU, Arizona, USA'],
+        introduction: 'Brings clinical experience in audiology, neuro-rehabilitation and swallowing care to the multidisciplinary team.'
+      },
+      {
+        name: 'Mrs. Pritee Mehta',
+        title: 'Life Coach | Mind Trainer | Founder – One Wellness',
+        credentials: [],
+        introduction: 'Supports personal growth through life coaching and mind training, drawing on meditation, affirmations, gratitude, forgiveness practices and EFT.'
+      }
+    ],
     fields: {
       name: 'Name',
       qualification: 'Qualification',
@@ -370,7 +394,8 @@ export const en: TranslationSchema = {
     ctaHeading: 'Come and See\nthe Space.',
     ctaText:
       'Consultations are by appointment so that the room, therapists and preparations can be readied for you.',
-    contactBtn: 'Contact One Wellness'
+    contactBtn: 'Contact One Wellness',
+    ctaImageAlt: 'A quiet, green landscape surrounding a wellness retreat'
   },
   panchakarmaPage: {
     heroEyebrow: 'Panchakarma',
@@ -547,12 +572,12 @@ export const en: TranslationSchema = {
     heroEyebrow: 'Ayurvedic Consultation',
     heroTitle: 'Every Journey Starts With a Conversation',
     heroLede:
-      'Nothing is recommended before we understand the individual. Consult Dr. Shubham Mahajan (BAMS, DYS) to evaluate your constitution, discuss health concerns, and structure a personalised therapy program.',
+      'Nothing is recommended before we understand the individual. Meet with our clinic team to discuss your routine, wellness priorities and possible next steps.',
     meta: {
       consultantLabel: 'Consultant',
-      consultantValue: 'Dr. Shubham Mahajan',
+      consultantValue: 'One Wellness Clinic',
       qualificationsLabel: 'Qualifications',
-      qualificationsValue: 'BAMS, DYS',
+      qualificationsValue: 'Personalised Ayurvedic wellness',
       feeLabel: 'Consultation fee',
       feeValue: '₹1,000',
       requiredBeforeLabel: 'Required before',
@@ -581,13 +606,9 @@ export const en: TranslationSchema = {
     heroEyebrow: 'Contact',
     heroTitle: 'Plan Your Visit',
     heroLede:
-      'Consultations and therapies are by appointment so that the treatment room, preparations and team are readied for you. Meet Dr. Shubham Mahajan at our Nashik clinic.',
+      'Consultations and therapies are by appointment so that the treatment room, preparations and team are readied for you. Connect with One Wellness Clinic in Nashik.',
     getInTouch: 'Get in touch',
-    divisionTitle: 'Panchakarma &\nAyurvedic Wellness Division',
-    leadPractitioner: 'Lead Ayurvedic Practitioner',
-    doctorBio:
-      'Dr. Shubham Mahajan leads the Ayurvedic clinical practice at One Wellness Clinic & Research Center, specializing in authentic Panchakarma, individualized dosha assessment, and precision Agnikarma therapy.',
-    verifiedRegistration: 'Verified Registration: I-124470-A',
+    divisionTitle: 'Connect with\nOne Wellness Clinic',
     directContact: 'Direct Contact',
     clinicHours: 'Clinic Hours',
     monSat: 'Monday – Saturday',
@@ -988,8 +1009,7 @@ export const en: TranslationSchema = {
       ],
       factsLabel: 'At a glance',
       facts: [
-        { label: 'Consultant', value: 'Dr. Shubham Mahajan' },
-        { label: 'Qualifications', value: 'BAMS, DYS' },
+        { label: 'Approach', value: 'Personalised team-based consultation' },
         { label: 'Duration', value: '45–60 minutes' },
         { label: 'Consultation fee', value: '₹1,000' },
         { label: 'Setting', value: 'Quiet, private room' }
@@ -1143,7 +1163,7 @@ export const en: TranslationSchema = {
         'One Wellness Clinic & Research Center offers an oasis of calm on the Agra-Mumbai Highway in Nashik. Authentic Ayurvedic wisdom meets serene contemporary comfort.',
       seoTitle: 'Ayurvedic Wellness Centre in Nashik | One Wellness',
       seoDescription:
-        'Visit our premier Ayurvedic wellness and Panchakarma centre at Roongtha Shopping Hub, Indira Nagar, Nashik. Led by Dr. Shubham Mahajan.',
+        'Visit One Wellness Clinic & Research Center, an Ayurvedic wellness and Panchakarma centre at Roongtha Shopping Hub, Indira Nagar, Nashik.',
       sections: [
         {
           heading: 'Our sanctuary',
@@ -1155,7 +1175,7 @@ export const en: TranslationSchema = {
       ],
       factsLabel: 'Clinic highlights',
       facts: [
-        { label: 'Lead Doctor', value: 'Dr. Shubham Mahajan' },
+        { label: 'Approach', value: 'Personalised team-based care' },
         { label: 'Location', value: 'Roongtha Shopping Hub, Nashik' },
         { label: 'Hours', value: '09:00 AM – 07:00 PM' }
       ],
@@ -1189,7 +1209,7 @@ export const en: TranslationSchema = {
         {
           heading: 'Contact',
           body: [
-            'For any question about your information, write to 1wellnessclinic@gmail.com or call +91 9175893553.'
+            'For any question about your information, write to onewellnessttc@gmail.com or call +91 9175893553.'
           ]
         }
       ]
@@ -1240,7 +1260,7 @@ export const en: TranslationSchema = {
         {
           heading: 'Practitioner details',
           body: [
-            'Clinical consultations and therapies are guided by Dr. Shubham Mahajan (BAMS, DYS, Reg. No. I-124470-A), whose verified credentials and qualifications are published across our About and Contact pages.'
+            'Consultations and therapy suitability are discussed with a qualified practitioner as part of the clinic’s team-based approach.'
           ]
         }
       ]

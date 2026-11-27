@@ -126,10 +126,10 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 1 }}
         >
           <a
-            href="#doctor"
+            href="#introduction"
             className="group inline-flex items-center gap-2.5 text-[10px] uppercase tracking-label text-ivory/55 transition-colors duration-300 hover:text-ivory"
           >
-            <span>Meet Dr. Shubham Mahajan</span>
+            <span>{t('home.hero.scrollToExplore', 'Scroll to explore')}</span>
             <motion.span
               animate={reduce ? undefined : { y: [0, 4, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}

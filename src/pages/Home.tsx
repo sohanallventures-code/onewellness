@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Hero } from '../components/home/Hero';
-import { DoctorIntro } from '../components/home/DoctorIntro';
 import { IntroEditorial } from '../components/home/IntroEditorial';
 import { ProgramsPreview } from '../components/home/ProgramsPreview';
 import { PhilosophyJourney } from '../components/sections/PhilosophyJourney';
@@ -58,11 +57,6 @@ export function Home() {
           email: site.email,
           image: img.hero,
           areaServed: 'Nashik',
-          founder: {
-            '@type': 'Person',
-            name: site.doctor.name,
-            jobTitle: site.doctor.profession
-          },
           makesOffer: [
             { '@type': 'Offer', name: 'Ayurvedic Wellness Consultation' },
             { '@type': 'Offer', name: 'Panchakarma Wellness Program' },
@@ -72,7 +66,6 @@ export function Home() {
       />
 
       <Hero />
-      <DoctorIntro />
       <IntroEditorial />
       <PhilosophyJourney />
       <TrustStrip />

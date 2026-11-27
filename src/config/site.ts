@@ -18,12 +18,6 @@ export interface SiteConfig {
   email: string;
   website: string;
   websiteUrl: string;
-  doctor: {
-    name: string;
-    qualifications: string;
-    profession: string;
-    registrationNumber: string;
-  };
   address: {
     shop: string;
     building: string;
@@ -53,20 +47,13 @@ export const site: SiteConfig = {
     'A personalised Ayurvedic wellness experience inspired by traditional principles and designed for modern lifestyles.',
   city: 'Nashik',
 
-  doctor: {
-    name: 'Dr. Shubham Mahajan',
-    qualifications: 'BAMS, DYS',
-    profession: 'Ayurveda Consultant and Agnikarma Specialist',
-    registrationNumber: 'I-124470-A'
-  },
-
   phone: '+91 9175893553',
   whatsapp: '919175893553',
   whatsappMessage:
     'Hello, I would like to know more about your Panchakarma and Ayurvedic wellness programs.',
-  email: '1wellnessclinic@gmail.com',
-  website: 'www.1wellnessclinic.in',
-  websiteUrl: 'https://www.1wellnessclinic.in',
+  email: 'onewellnessttc@gmail.com',
+  website: 'OneWellnessClinic.in',
+  websiteUrl: 'https://onewellnessclinic.in/',
   address: {
     shop: 'Shop No. 7071, 7th Floor',
     building: 'Roongtha Shopping Hub',
@@ -98,7 +85,7 @@ export const site: SiteConfig = {
 };
 
 export const OFFICIAL_APPOINTMENT_MESSAGE =
-  'Hello, I would like to book an appointment with Dr. Shubham Mahajan at One Wellness Clinic.';
+  'Hello, I would like to book a wellness consultation with One Wellness Clinic & Research Center.';
 
 export const bookAppointmentWhatsappLink = (
   message: string = OFFICIAL_APPOINTMENT_MESSAGE

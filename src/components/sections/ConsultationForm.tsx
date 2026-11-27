@@ -97,7 +97,7 @@ export function ConsultationForm({
 
     // Build prefilled WhatsApp message with patient details
     const lines = [
-      'Hello Dr. Shubham Mahajan, I would like to request an appointment at One Wellness Clinic.',
+      'Hello, I would like to request a wellness consultation with One Wellness Clinic & Research Center.',
       `Patient Name: ${form.name.trim()}`,
       `Mobile Number: ${form.mobile.trim()}`,
       form.whatsapp.trim() ? `WhatsApp: ${form.whatsapp.trim()}` : null,
@@ -139,7 +139,7 @@ export function ConsultationForm({
             <div className="overflow-hidden border border-ink/15 bg-sand/60">
               <img
                 src={img.consultation}
-                alt="Ayurvedic consultation with Dr. Shubham Mahajan at One Wellness Clinic"
+                alt="A guest discussing personalised wellness care with a practitioner"
                 loading="lazy"
                 className="aspect-[16/10] w-full object-cover"
               />
@@ -167,7 +167,7 @@ export function ConsultationForm({
                 </a>.
               </p>
               <p className="mt-1 text-[11px] text-ink/45">
-                {site.doctor.name} ({site.doctor.qualifications}) • {site.address.building}, Nashik
+                {site.brand} • {site.address.building}, Nashik
               </p>
             </div>
           </Reveal>
@@ -202,10 +202,10 @@ export function ConsultationForm({
 
                   <p className="mt-2.5 text-sm leading-relaxed text-ink/70">
                     {i18n.language === 'mr'
-                      ? 'आम्ही डॉ. शुभम महाजन यांच्या क्लिनिकशी जोडण्यासाठी व्हॉट्सॲप लिंक उघडली आहे. कृपया व्हॉट्सॲपवर मेसेज पाठवून आपली अपॉइंटमेंट निश्चित करा.'
+                      ? 'तुमची चौकशी तयार आहे. कृपया व्हॉट्सॲपवर संदेश पाठवा; आमची क्लिनिक टीम तुमची वेळ तपासून निश्चित करेल.'
                       : i18n.language === 'hi'
-                      ? 'हमने डॉ. शुभम महाजन के क्लिनिक से जुड़ने के लिए व्हाट्सएप लिंक खोला है। कृपया व्हाट्सएप पर संदेश भेजकर अपनी अपॉइंटमेंट की पुष्टि करें।'
-                      : 'We have prepared your WhatsApp enquiry message for Dr. Shubham Mahajan (+91 9175893553). Please send the message on WhatsApp so our clinic team can verify and confirm your consultation schedule.'}
+                      ? 'आपकी पूछताछ तैयार है। कृपया व्हाट्सएप पर संदेश भेजें; हमारी क्लिनिक टीम समय की जाँच करके पुष्टि करेगी।'
+                      : 'Your WhatsApp enquiry is ready. Please send the message so our clinic team can verify and confirm your consultation schedule.'}
                   </p>
 
                   {/* Summary Box */}

@@ -31,10 +31,10 @@ export function Consultation() {
   const { t } = useTranslation();
 
   useSeo({
-    title: `${t('consultationPage.heroEyebrow', { defaultValue: 'Book an Ayurvedic Consultation' })} | ${site.doctor.name} | One Wellness`,
+    title: `${t('consultationPage.heroEyebrow', { defaultValue: 'Book an Ayurvedic Consultation' })} | One Wellness Clinic`,
     description: t('consultationPage.heroLede', {
       defaultValue:
-        'Book an Ayurvedic consultation in Nashik with Dr. Shubham Mahajan (BAMS, DYS, Reg. No. I-124470-A) at One Wellness Clinic & Research Center. Assessment, lifestyle discussion and personalised therapy suggestions.'
+        'Book an Ayurvedic wellness consultation in Nashik with One Wellness Clinic & Research Center. Discuss your routine, wellness priorities and personalised therapy options with our team.'
     }),
     path: '/consultation',
     image: img.consultation
@@ -57,18 +57,18 @@ export function Consultation() {
         title={t('consultationPage.heroTitle', { defaultValue: 'Every Journey Starts With a Conversation' })}
         lede={t('consultationPage.heroLede', {
           defaultValue:
-            'Nothing is recommended before we understand the individual. Consult Dr. Shubham Mahajan (BAMS, DYS) to evaluate your constitution, discuss health concerns, and structure a personalised therapy program.'
+            'Nothing is recommended before we understand the individual. Meet with our clinic team to discuss your routine, wellness priorities and possible next steps.'
         })}
         image={img.consultation}
         alt="An Ayurvedic practitioner in conversation with a visitor during a consultation"
         meta={[
           {
             label: t('consultationPage.meta.consultantLabel', { defaultValue: 'Consultant' }),
-            value: site.doctor.name
+            value: site.brand
           },
           {
             label: t('consultationPage.meta.qualificationsLabel', { defaultValue: 'Qualifications' }),
-            value: site.doctor.qualifications
+            value: t('consultationPage.meta.qualificationsValue', { defaultValue: 'Personalised Ayurvedic wellness' })
           },
           {
             label: t('consultationPage.meta.feeLabel', { defaultValue: 'Consultation fee' }),

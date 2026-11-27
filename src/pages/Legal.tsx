@@ -95,12 +95,7 @@ const FALLBACK_CONTENT: Record<
       {
         heading: 'Practitioner details',
         body: [
-          `Clinical consultations and therapies are guided by Dr. ${site.doctor.name.replace(
-            /^Dr\.\s*/,
-            ''
-          )} (${site.doctor.qualifications}, Reg. No. ${
-            site.doctor.registrationNumber
-          }), whose verified credentials and qualifications are published across our About and Contact pages.`
+          'Consultations and therapy suitability are discussed with a qualified practitioner as part of the clinic’s team-based approach.'
         ]
       }
     ]
